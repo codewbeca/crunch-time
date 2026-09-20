@@ -1,0 +1,204 @@
+:root {
+  --wood-dark: #2c221e;
+  --wood-frame: #4a3525;
+  --bg-cream: #f4ebd0;
+  --container-bg: #fffbf0;
+  --text-color: #3b2f2f;
+  --accent-rose: #d4a5a5;
+  --accent-rose-hover: #c49494;
+  --brass-gold: #c5a059;
+  --border-color: #d1bfa7;
+}
+
+body.dark-mode {
+  --wood-dark: #12100e;
+  --wood-frame: #261c14;
+  --bg-cream: #1e1b18;
+  --container-bg: #27221d;
+  --text-color: #f0e6d2;
+  --accent-rose: #a37575;
+  --accent-rose-hover: #b58585;
+  --brass-gold: #9e7f43;
+  --border-color: #3d332a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--wood-dark);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background 0.4s ease;
+}
+
+.app-container {
+  background-color: var(--container-bg);
+  border: 6px solid var(--wood-frame);
+  width: 440px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.app-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--brass-gold);
+  letter-spacing: 0.5px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  background: var(--bg-cream);
+  border: 1px solid var(--brass-gold);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.icon-btn:hover {
+  background: var(--accent-rose);
+  color: white;
+}
+
+.library-frame {
+  background: linear-gradient(135deg, #362920 0%, #201812 100%);
+  border: 4px solid var(--brass-gold);
+  border-radius: 12px;
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  position: relative;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.mascot-scene {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Tip: You can add background-image: url('./assets/library-mascot.png'); here once you have your image! */
+  background-size: cover;
+  background-position: center;
+}
+
+.timer-display-box {
+  background: rgba(44, 34, 30, 0.85);
+  border: 2px solid var(--brass-gold);
+  padding: 8px 22px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.timer-display-box span {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #fffbf0;
+  letter-spacing: 2px;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.controls button {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--brass-gold);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.primary-btn {
+  background-color: var(--accent-rose);
+  color: white;
+  border-color: var(--accent-rose);
+}
+
+.primary-btn:hover:not(:disabled) {
+  background-color: var(--accent-rose-hover);
+}
+
+.secondary-btn {
+  background-color: var(--bg-cream);
+  color: var(--text-color);
+}
+
+.secondary-btn:hover:not(:disabled) {
+  background-color: var(--border-color);
+}
+
+.controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.modes {
+  display: flex;
+  gap: 6px;
+  background: var(--bg-cream);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.mode-btn {
+  flex: 1;
+  padding: 8px;
+  font-size: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.mode-btn.active {
+  background-color: var(--brass-gold);
+  color: white;
+  font-weight: 600;
+}
