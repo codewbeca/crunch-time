@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pandoro - Dark Academia Study Nook</title>
+  <!-- Google Fonts: Playfair Display & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <h1>Crunch Time</h1>
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle-btn" title="Toggle Theme">☀️</button>
+        <button class="icon-btn" id="close-btn" title="Close App">✕</button>
+      </div>
+    </header>
+
+    <!-- Library Frame / Mascot Visual Area -->
+    <div class="library-frame">
+      <div class="mascot-scene">
+        <!-- Timer Display Overlaid on the Library Scene -->
+        <div class="timer-display-box">
+          <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="start-btn" class="primary-btn">▶ Start</button>
+      <button id="pause-btn" class="secondary-btn" disabled>⏸ Pause</button>
+      <button id="reset-btn" class="secondary-btn">↺ Reset</button>
+    </div>
+
+    <!-- Mode Selector -->
+    <div class="modes">
+      <button class="mode-btn active" data-mode="study">Study</button>
+      <button class="mode-btn" data-mode="shortBreak">Short Break</button>
+      <button class="mode-btn" data-mode="longBreak">Long Break</button>
+    </div>
+  </div>
+
+  <script src="./renderer.js"></script>
+</body>
+</html>
